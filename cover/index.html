@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Dan Hoog">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Inktelligence · IA</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #0000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <img src="../images/flavicon.png" alt="logo" class="float-md-start mb-0">
+        <h3 class="float-md-start mb-0">Inktelligence</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+          <div class="swiper-slide" id="home">
+            <!-- ======= Home Section ======= -->
+            <section class="home">
+
+              <h1>Pushing the limits of AI.</h1>
+              <p class="lead"><b>Inktelligence</b> is a company that specializes in automation, artificial intelligence, and
+                other techniques.
+                Our mission is to provide innovative solutions to complex problems.
+                We offer a wide range of services, including machine learning,
+                natural language processing, computer vision & applied AI.</p>
+              <p class="lead">
+                <a href="#services" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+              </p>
+            </section>
+            <!-- ======= End Home Section ======= -->
+          </div>
+
+          <div class="swiper-slide" id="services">
+            <!-- ======= Service Section ======= -->
+            <section  class="services">
+              <div class="section-title">
+                <h1>Services</h1>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                  consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+                  in iste officiis commodi quidem hic quas.</p>
+              </div>
+            </section>
+            <!-- End Service Section -->
+          </div>
+
+          <div class="swiper-slide" id="contact">
+            <!-- ======= Service Section ======= -->
+            <section  class="contact">
+              <div class="section-title">
+                <h1>About</h1>
+                <p>Created with love.</p>
+              </div>
+            </section>
+            <!-- End Service Section -->
+          </div>
+
+      </div>
+    </div>
+
+    <footer class="mt-auto text-white-50">
+      <p>Made with <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+          href="https://es.linkedin.com/in/daniel-ramos-hoogwout" class="text-white">@Daniel</a>.</p>
+    </footer>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <script>
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(link => link.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+  </script> 
+
+</body>
+
+</html>

@@ -60,6 +60,12 @@ ul {
 }
 */
 
+/* Section */
+section {
+  width: 100%;
+}
+
+
 /* Hover Services Section */
 /* Dropdown Button */
 .dropdown {

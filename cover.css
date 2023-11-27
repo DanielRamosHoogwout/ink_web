@@ -61,12 +61,13 @@ ul {
 */
 
 /* Section */
+/* Take all available space */
 section {
   width: 100%;
 }
 
-
 /* Hover Services Section */
+
 /* Dropdown Button */
 .dropdown {
   position: relative;

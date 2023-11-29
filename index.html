@@ -108,7 +108,7 @@
               <!-- Dropdown on hover-->
                 <div class="col-sm border">
                   <h3 class="dropdown">AI.
-                    <div class="dropdown-menu border">
+                    <div class="dropdown-content">
                       <p>Some text. <br>
                       Let's Get Real.</p>
                     </div>
@@ -179,51 +179,16 @@
     });
   </script>
 
-<!--   <script>
+  <script>
     // Dropdown Menu
-    var dropdown = document.querySelectorAll('.dropdown');
-    var dropdownArray = Array.prototype.slice.call(dropdown,0);
-    dropdownArray.forEach(function(el){
-      var button = el.querySelector('a[data-toggle="dropdown"]'),
-          menu = el.querySelector('.dropdown-content'),
-          arrow = button.querySelector('i.icon-arrow');
+  </script>
 
-      button.onclick = function(event) {
-        if(!menu.hasClass('show')) {
-          menu.classList.add('show');
-          menu.classList.remove('hide');
-          arrow.classList.add('open');
-          arrow.classList.remove('close');
-          event.preventDefault();
-        }
-        else {
-          menu.classList.remove('show');
-          menu.classList.add('hide');
-          arrow.classList.remove('open');
-          arrow.classList.add('close');
-          event.preventDefault();
-        }
-      };
-    })
-
-    Element.prototype.hasClass = function(className) {
-        return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-    };
-  </script> -->
-
-   <!-- Nav Pagination-->
-   <script>
-    ;
-    
+  <!-- Nav Pagination-->
+  <script>
     swiper.on('transitionEnd', function (e) {
       navLinks.forEach(link => link.classList.remove('active'));
       navLinks[swiper.activeIndex].classList.add('active');
     });
-    //link[realIndex].classList.add("active");
-  
-    
-    
-
   </script>
 
 </body>

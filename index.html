@@ -168,6 +168,7 @@
   </script>
 
   <!-- Nav Activator-->
+  <!-- Antes de redireccionar igual es mejor ir a la slide que toca -->
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -187,7 +188,7 @@
   <script>
     swiper.on('transitionEnd', function (e) {
       navLinks.forEach(link => link.classList.remove('active'));
-      navLinks[swiper.activeIndex].classList.add('active');
+      navLinks[swiper.realIndex].classList.add('active');
     });
   </script>
 

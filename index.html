@@ -167,6 +167,7 @@
     });
   </script>
 
+  <!-- Nav Activator-->
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -178,7 +179,7 @@
     });
   </script>
 
-  <script>
+<!--   <script>
     // Dropdown Menu
     var dropdown = document.querySelectorAll('.dropdown');
     var dropdownArray = Array.prototype.slice.call(dropdown,0);
@@ -208,6 +209,21 @@
     Element.prototype.hasClass = function(className) {
         return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
     };
+  </script> -->
+
+   <!-- Nav Pagination-->
+   <script>
+    ;
+    
+    swiper.on('transitionEnd', function (e) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLinks[swiper.activeIndex].classList.add('active');
+    });
+    //link[realIndex].classList.add("active");
+  
+    
+    
+
   </script>
 
 </body>

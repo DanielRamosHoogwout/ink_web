@@ -70,9 +70,9 @@
         <img src="images/flavicon.png" alt="logo" class="float-md-start mb-0">
         <h3 class="float-md-start mb-0">Inktelligence.</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link active" aria-current="page">Home</a>
+          <a class="nav-link">Services</a>
+          <a class="nav-link">Contact</a>
         </nav>
       </div>
     </header>
@@ -168,20 +168,23 @@
   </script>
 
   <!-- Nav Activator-->
-  <!-- Antes de redireccionar igual es mejor ir a la slide que toca -->
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
-
+    
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navLinks.forEach(link => link.classList.remove('active'));
         link.classList.add('active');
+        if (link.innerHTML === "Home") {
+          swiper.slideTo(0);
+        } else if (link.innerHTML === "Services") {
+          swiper.slideTo(1);
+        } else {
+          swiper.slideTo(2);
+        }
+        
       });
     });
-  </script>
-
-  <script>
-    // Dropdown Menu
   </script>
 
   <!-- Nav Pagination-->
@@ -190,6 +193,10 @@
       navLinks.forEach(link => link.classList.remove('active'));
       navLinks[swiper.realIndex].classList.add('active');
     });
+  </script>
+
+  <script>
+    //Dropdown in Services
   </script>
 
 </body>

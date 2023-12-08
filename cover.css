@@ -81,6 +81,7 @@ section {
   max-height: 0px;
   overflow: hidden;
   text-align: center;
+  width: 10%;
 }
  
 /* https://stackoverflow.com/questions/72339351/how-to-animate-closing-dropdown-menu-with-js-and-css */
@@ -90,5 +91,6 @@ section {
   color: #fff;
   max-height: 300px;
   width: 100%;
-  transition: max-height 1.5s ease-in;
+  transition: max-height 1.5s 0.25s ease-in, width 0.5s;
+  
 }

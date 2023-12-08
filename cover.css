@@ -71,15 +71,24 @@ section {
 /* Dropdown Button */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
+  font-size: large;
   display: block;
+  z-index: -1;
+  max-height: 0px;
+  overflow: hidden;
+  text-align: center;
+}
+ 
+/* https://stackoverflow.com/questions/72339351/how-to-animate-closing-dropdown-menu-with-js-and-css */
+.dropdown:hover .dropdown-content {
+  border-top: solid white;
+  display: block;
+  color: #fff;
+  max-height: 300px;
+  width: 100%;
+  transition: max-height 1.5s ease-in;
 }

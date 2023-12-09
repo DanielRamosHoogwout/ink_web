@@ -120,7 +120,13 @@
 
                 <div class="col-sm">
                   <h3 class="dropdown">Automation.
-                    <div class="dropdown-content">Fun moments.<br>Exciting.<br>Times.</div>
+                    <div class="dropdown-content">
+                      <p>
+                      Fun moments.<br>
+                      Exciting.<br>
+                      Times.
+                      </p>
+                    </div>
                   </h3>
                 </div>
 
@@ -200,6 +206,22 @@
 
   <script>
     //Dropdown in Services
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
+
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener('mouseover', () => {
+        dropdownContents.forEach((dropdownContent) => {
+          dropdownContent.style.borderTop = 'solid white';
+          dropdownContent.style.display = 'block';
+          dropdownContent.style.color = '#fff';
+          dropdownContent.style.maxHeight = '300px';
+          dropdownContent.style.width = '100%';
+          dropdownContent.style.transition = 'max-height 1.5s 0.25s ease-in, width 0.5s';
+        });
+      });
+    });
+
   </script>
 
 </body>

@@ -218,10 +218,15 @@
           dropdownContent.style.maxHeight = '300px';
           dropdownContent.style.width = '100%';
           dropdownContent.style.transition = 'max-height 1.5s 0.25s ease-in, width 0.5s';
+
+          // Add media query to change width for smartphones
+          if (window.matchMedia("(max-width: 767px)").matches) {
+            dropdownContent.style.width = '50%';
+            dropdownContent.style.margin = 'auto';
+          }
         });
       });
     });
-
   </script>
 
 </body>

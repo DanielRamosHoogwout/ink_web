@@ -83,15 +83,3 @@ section {
   text-align: center;
   width: 10%;
 }
- 
-/* 
-.dropdown:hover .dropdown-content {
-  border-top: solid white;
-  display: block;
-  color: #fff;
-  max-height: 300px;
-  width: 100%;
-  transition: max-height 1.5s 0.25s ease-in, width 0.5s;
-  
-}
-*/

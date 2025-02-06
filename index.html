@@ -110,9 +110,9 @@
                   <h3 class="dropdown">AI.
                     <div class="dropdown-content">
                       <p>
-                        LLM<br>
-                        Computer Vision<br>
-                        Speech-to-text
+                        LLMs<br>
+                        Model training<br>
+                        Prompt Engineering
                       </p>
                     </div>
                   </h3>
@@ -122,9 +122,9 @@
                   <h3 class="dropdown">Automation.
                     <div class="dropdown-content">
                       <p>
-                      Fun moments.<br>
-                      Exciting.<br>
-                      Times.
+                      APIs<br>
+                      Scripting<br>
+                      Orquestration
                       </p>
                     </div>
                   </h3>
@@ -132,7 +132,7 @@
 
                 <div class="col-sm">
                   <h3 class="dropdown">Visualization.
-                    <div class="dropdown-content">Live.<br>Love.<br>Laugh.</div>
+                    <div class="dropdown-content">Insights<br>Reports<br>Dashboards</div>
                   </h3>
                 </div>
             </div>
@@ -153,6 +153,33 @@
 
       </div>
     </div>
+
+    <!-- Chatbot -->
+    <div class="chat-wrapper">
+      <!-- Floating Chat Icon -->
+      <button class="btn chat-icon" id="chatIcon">
+        <img src="images/flavicon.png" alt="chat" class="chat-img">
+      </button>
+
+      <!-- Chat Box -->
+      <div class="chat-box card">
+          <div class="card-header d-flex justify-content-between align-items-center bg-dark text-white">
+              <h5>Inktellichat.</h5>
+              <button class="btn-close btn-close-white" id="closeChat"></button>
+          </div>
+          <div class="card-body chat-content">
+              <div class="chat-message support">Hello! How can I help you?</div>
+          </div>
+          <div class="card-footer chat-input">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Type a message...">
+                  <button class="btn btn-outline-dark">➤</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- End Chatbot -->
 
     <footer class="mt-auto text-white-50">
       <p>Made with <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
@@ -227,6 +254,56 @@
         });
       });
     });
+  </script>
+
+  <script>
+    document.getElementById("chatIcon").addEventListener("click", function() {
+      document.querySelector(".chat-box").style.display = "block";
+      //this.classList.add("hidden"); // Invert colors when chat opens
+    });
+
+    document.getElementById("closeChat").addEventListener("click", function() {
+        document.querySelector(".chat-box").style.display = "none";
+       // document.getElementById("chatIcon").classList.remove("hidden"); // Reset colors when chat closes
+    });
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const inputField = document.querySelector(".chat-input input");
+        const sendButton = document.querySelector(".chat-input button");
+        const chatContent = document.querySelector(".chat-content");
+
+        // Function to add a message
+        function addMessage() {
+            let messageText = inputField.value.trim();
+
+            if (messageText !== "") {
+                let messageDiv = document.createElement("div");
+                messageDiv.classList.add("chat-message", "user");
+                messageDiv.innerText = messageText;
+
+                chatContent.appendChild(messageDiv);
+                inputField.value = "";
+
+                // Auto-scroll to the latest message
+                chatContent.scrollTop = chatContent.scrollHeight;
+            }
+        }
+
+        // Click event for Send button
+        sendButton.addEventListener("click", addMessage);
+
+        // Enter key event in input field
+        inputField.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent default form submission
+                addMessage();
+            }
+        });
+    });
+
   </script>
 
 </body>
